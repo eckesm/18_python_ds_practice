@@ -22,10 +22,12 @@ def two_oldest_ages(ages):
     # can take *any* type of list-like-thing, and returns a new, sorted list
     # from it.
 
-    oldest = 0
-    second = 0
-    for age in sorted(ages):
-        if age > oldest and oldest != age:
-            second = oldest
-            oldest = age
-    return(second, oldest)
+    # oldest = 0
+    # second = 0
+    # for age in sorted(ages):
+    young_to_old = sorted(set(ages))
+    #     if age > oldest and oldest != age:
+    #         second = oldest
+    #         oldest = age
+    # return(second, oldest)
+    return tuple(young_to_old[-2:])

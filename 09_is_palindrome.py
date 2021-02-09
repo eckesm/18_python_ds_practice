@@ -21,8 +21,11 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
-    # return phrase==phrase[::-1]
-    adjusted_phrase = [char.upper() for char in phrase if char is not ' ']
-    reversed_phrase = [char.upper()
-                       for char in phrase[::-1] if char is not ' ']
-    return adjusted_phrase == reversed_phrase
+    # adjusted_phrase = [char.upper() for char in phrase if char is not ' ']
+    # reversed_phrase = [char.upper()
+    #                    for char in phrase[::-1] if char is not ' ']
+    # return adjusted_phrase == reversed_phrase
+
+    # incorporating suggested solutions
+    adjusted_phrase=phrase.lower().replace(' ','')
+    return adjusted_phrase==adjusted_phrase[::-1]

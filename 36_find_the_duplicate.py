@@ -17,3 +17,12 @@ def find_the_duplicate(nums):
         if nums.count(item) > 1:
             return item
     return None
+
+    # alternative solution:
+
+    seen = set()
+
+    for num in nums:
+        if num in seen:
+            return num
+        seen.add(num)

@@ -40,6 +40,8 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
     if make_int:
         result = int(result)
 
-    result = f"{message} {result}"
+    # result = f"{message} {result}"
+    # return result
 
-    return result
+    # incorporating suggested solution:
+    return f"{message} {result}"

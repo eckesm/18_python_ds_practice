@@ -11,8 +11,18 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
-    most_common = ['', 0]
-    for (k, v) in {num: nums.count(num) for num in nums}.items():
-        if v > most_common[1]:
-            most_common = [k, v]
-    return most_common[0]
+    # most_common = ['', 0]
+    # for (k, v) in {num: nums.count(num) for num in nums}.items():
+    #     if v > most_common[1]:
+    #         most_common = [k, v]
+    # return most_common[0]
+
+    # incorporating suggested solution:
+    counts = {}
+    for num in nums:
+        counts[num] = counts.get(num, 0)+1
+
+    max_value = max(counts.values())
+    for (num, freq) in counts.items():
+        if freq == max_value:
+            return num

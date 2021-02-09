@@ -4,8 +4,11 @@ def compact(lst):
         >>> compact([0, 1, 2, '', [], False, (), None, 'All done'])
         [1, 2, 'All done']
     """
-    answer = []
-    for item in lst:
-        if item:
-            answer.append(item)
-    return answer
+    # answer = []
+    # for item in lst:
+    #     if item:
+    #         answer.append(item)
+    # return answer
+
+    # incorporating suggested solution:
+    return [val for val in lst if val]

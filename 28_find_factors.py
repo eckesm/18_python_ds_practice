@@ -13,8 +13,11 @@ def find_factors(num):
     >>> find_factors(321421)
     [1, 293, 1097, 321421]
     """
-    factors = []
-    for divisor in range(1, num+1):
-        if num % divisor == 0:
-            factors.append(divisor)
-    return factors
+    # factors = []
+    # for divisor in range(1, num+1):
+    #     if num % divisor == 0:
+    #         factors.append(divisor)
+    # return factors
+
+    # incorporating suggested solutions:
+    return [div for div in range(1,num+1) if num % div==0]

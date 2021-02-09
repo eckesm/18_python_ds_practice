@@ -21,9 +21,23 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
-    for x in range(0,len(nums)):
-        a=nums[x]
-        b=goal[x+1]
-        if a+b==goal:
-            return (a,b)
-    return None
+    # for x in range(0,len(nums)):
+    #     a=nums[x]
+    #     b=goal[x+1]
+    #     if a+b==goal:
+    #         return (a,b)
+    # return None
+
+
+    # COULD NOT FIGURE OUT--UNDERSTAND WITH SOLUTION:
+    already_visited=set()
+
+    for num in nums:
+        difference=goal-num
+
+        if difference in already_visited:
+            return(difference,num)
+        
+        already_visited.add(num)
+    
+    return ()

@@ -19,7 +19,8 @@ def repeat(phrase, num):
         True
     """
     if type(num) is int and num >= 0:
-        repeated_phrase = ''
-        for x in range(num):
-            repeated_phrase += phrase
-        return repeated_phrase
+        # repeated_phrase = ''
+        # for x in range(num):
+            # repeated_phrase += phrase
+        # return repeated_phrase
+        return phrase*num
